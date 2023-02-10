@@ -1,0 +1,31 @@
+<header>
+    <%- include("partials/header"); %>
+</header>
+
+<div class="container">
+    <h1>Home</h1>
+    <p>
+        <%= startingContent %>
+    </p>
+</div>
+
+<!-- <% console.log(posts); %> -->
+
+<% posts.forEach(function(post) { %>
+    <!-- <% console.log(post.title); %> -->
+
+    <div class="container">
+        <h1>
+            <%= post.title %>
+        </h1>
+        <p>
+            <%= post.content.substring(0, 100) + " ..." %>
+                <a class="textdecor" href="/posts/<%= post._id %>">Read More</a>
+        </p>
+    </div>
+
+    <% }); %>
+
+        <footer>
+            <%- include("partials/footer"); %>
+        </footer>
