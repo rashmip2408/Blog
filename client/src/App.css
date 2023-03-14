@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #222;
+}
+
+a {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 10px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+/* post */
+div.post {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 700px) {
+  div.post {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+div.post div.texts h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+div.post div.texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+div.post p.info {
+  margin: 20px 0;
+  color: #888;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+
+div.post p.info a.author {
+  color: #333;
+}
+
+div.post p.summary {
+  margin: 10px 0;
+  line-height: 1.8rem;
+}
+
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #bec1eb;
+  box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+  border-radius: 10px;
+}
+
+.login-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #222;
+  text-align: center;
+}
+
+.login-box .user-box input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  border: none;
+  border-bottom: 1px solid #222;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: relative;
+  left: 0;
+  top: -60px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #222;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+#submit {
+  padding: 10px 20px;
+  color: #46236c;
+  background: #8f7cec;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border: 1px solid #8f7cec;
+  margin: auto;
+}
+
+#submit:hover {
+  background: #8f7cec;
+  color: #222;
+  box-shadow: 0 0 5px #8f7cec, 0 0 25px #8f7cec, 0 0 50px #8f7cec,
+    0 0 100px #8f7cec;
+}
+
+.button-form {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+#register {
+  font-size: 14px;
+  text-decoration: none;
+  color: #46236c;
+  margin: auto;
+  width: 60%;
+  text-align: center;
+}
+
+#register a {
+  margin: auto;
+  color: #8f7cec;
+  text-decoration: none;
+}
+
+div.post-page div.image {
+  max-height: 300px;
+  display: flex;
+  overflow: hidden;
+}
+
+div.post-page div.image img {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+
+div.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+div.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+div.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 1rem;
+  color: #aaa;
+  margin: 10px 0;
+}
+
+div.post-page div.author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+div.content p {
+  line-height: 1.7rem;
+  margin: 30px 0;
+}
+
+div.content li {
+  margin-bottom: 10px;
+}
+
+div.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+div.post-page a.edit-btn {
+  background-color: #333;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.compose-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  background: #bec1eb;
+  box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+  border-radius: 10px;
+}
+
+.compose-box h2 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #222;
+}
+
+.compose-box .user-box label {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #222;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.compose-box .user-box input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+  border: none;
+  border-bottom: 1px solid #222;
+  outline: none;
+  background: transparent;
+}
+
+#publish {
+  padding: 10px 20px;
+  color: #46236c;
+  background: #8f7cec;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border: 1px solid #8f7cec;
+}
+
+#publish:hover {
+  background: #8f7cec;
+  color: #222;
+  box-shadow: 0 0 5px #8f7cec, 0 0 25px #8f7cec, 0 0 50px #8f7cec,
+    0 0 100px #8f7cec;
+}
